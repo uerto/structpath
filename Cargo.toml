@@ -1,0 +1,29 @@
+[package]
+name = "uerto-structpath"
+version = "ew_version"
+edition = "2021"
+authors = ["Jonathan Herrera"]
+description = "A library for navigating nested data structures using path expressions"
+readme = "README.md"
+license = "MIT"
+repository = "https://github.com/uerto/structpath"
+
+[lib]
+name = "structpath"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+serde_json = "1.0"
+thiserror = "1.0"
+pyo3 = { version = "0.19", features = ["extension-module", "abi3-py38"] }
+
+[features]
+default = ["extension-module"]
+extension-module = ["pyo3/extension-module"]
+
+[build-dependencies]
+pyo3-build-config = "0.19"
+
+[dev-dependencies]
+tempfile = "3.3"
+rstest = "0.17"

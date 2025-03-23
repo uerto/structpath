@@ -1,0 +1,11 @@
+site/
+target/
+**/__pycache__
+.venv/
+
+*.so
+.python-build-timestamp
+.build-timestamp
+
+uv.lock
+Cargo.lock

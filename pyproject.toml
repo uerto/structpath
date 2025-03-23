@@ -1,0 +1,61 @@
+[build-system]
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "uerto-structpath"
+version = "ew_version"
+description = "A library for navigating nested data structures using path expressions"
+authors = [
+    {name = "Jonathan Herrera", email = "jonathan@uerto.net"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Rust",
+    "Typing :: Typed",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/uerto/structpath"
+Documentation = "https://uerto.github.io/lib/structpath"
+Source = "https://github.com/uerto/structpath"
+Issues = "https://github.com/uerto/structpath/issues"
+
+[tool.maturin]
+python-source = "python"
+module-name = "structpath._structpath"
+features = ["extension-module"]
+
+[tool.maturin.package-data]
+"structpath._structpath" = ["py.typed"]
+
+[tool.ruff]
+line-length = 80
+target-version = "py312"
+
+[tool.ruff.isort]
+force-single-line = true
+
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+
+[dependency-groups]
+dev = [
+    "isort>=5.13.2",
+    "mdformat>=0.7.22",
+    "mdformat-pyproject>=0.0.2",
+    "mypy>=1.15.0",
+    "pytest>=8.3.5",
+    "uneedtest>=0.1.0",
+    "mkdocs-material>=9.6.9",
+    "mkdocstrings[python]>=0.29.0",
+]
