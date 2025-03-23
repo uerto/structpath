@@ -1,0 +1,49 @@
+site_name: uerto-structpath
+site_url: https://uerto.github.io/libs/structpath
+use_directory_urls: true
+
+site_description: A library for working with nested structured data using path
+  syntax
+repo_url: https://github.com/uerto/structpath
+
+theme:
+  name: material
+  features:
+    - content.code.copy
+    - content.code.select
+  logo: https://raw.githubusercontent.com/uerto/appearance/refs/heads/master/logo/icon-monochrome-inverted.svg
+  favicon: https://raw.githubusercontent.com/uerto/appearance/refs/heads/master/logo/icon.svg
+extra_css:
+  - https://cdn.jsdelivr.net/gh/uerto/appearance@master/definitions.css
+  - https://cdn.jsdelivr.net/gh/uerto/appearance@master/mkdocs-material.css
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [docs]
+          options:
+            show_source: false
+            show_root_heading: true
+            show_category_heading: true
+            members_order: source
+            merge_init_into_class: true
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - md_in_html
+  - footnotes
+  - toc:
+      permalink: true
+
+nav:
+  - Intro: index.md
+  - Working with Variables: variables.md
+  - API: API.md
