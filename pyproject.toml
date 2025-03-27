@@ -4,7 +4,7 @@ build-backend = "maturin"
 
 [project]
 name = "uerto-structpath"
-version = "ew_version"
+version = "0.1.0"
 description = "A library for navigating nested data structures using path expressions"
 authors = [
     {name = "Jonathan Herrera", email = "jonathan@uerto.net"}
@@ -22,7 +22,7 @@ classifiers = [
 
 [project.urls]
 Homepage = "https://github.com/uerto/structpath"
-Documentation = "https://uerto.github.io/lib/structpath"
+Documentation = "https://uerto.github.io/structpath"
 Source = "https://github.com/uerto/structpath"
 Issues = "https://github.com/uerto/structpath/issues"
 

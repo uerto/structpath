@@ -1,5 +1,4 @@
-site_name: uerto-structpath
-site_url: https://uerto.github.io/libs/structpath
+site_name: structpath
 use_directory_urls: true
 
 site_description: A library for working with nested structured data using path

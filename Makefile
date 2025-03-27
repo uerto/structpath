@@ -103,7 +103,7 @@ release: clean check docs
 	sed -i "s/^version = \"$(VERSION)\"/version = \"$(V)\"/" pyproject.toml; \
 	git add pyproject.toml; \
 	git commit -m "Bump version to $(V)"; \
-	git tag -a "v$new_version" -m "Version $(V)"; \
+	git tag -a "v$(V)" -m "Version $(V)"; \
 	git push --tags; \
 	echo "Tagged v$(V)."
 

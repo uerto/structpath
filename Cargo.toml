@@ -1,6 +1,6 @@
 [package]
 name = "uerto-structpath"
-version = "ew_version"
+version = "0.1.0"
 edition = "2021"
 authors = ["Jonathan Herrera"]
 description = "A library for navigating nested data structures using path expressions"

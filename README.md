@@ -14,5 +14,5 @@ pip install uerto-structpath
 ## Documentation
 
 ```
-https://uerto.github.io/libs/structpath
+https://uerto.github.io/structpath
 ```

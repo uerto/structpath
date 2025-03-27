@@ -29,12 +29,8 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./site
-          destination_dir: libs/structpath
       - name: Deployment details
         run: |
-          echo "Deployed to: https://$(echo ${{ github.repository_owner }}).github.io/$(echo ${{ github.event.repository.name }})/libs/structpath"
           echo "Published branch: gh-pages"
           echo "Published directory: ./site"
-          echo "Destination directory: libs/structpath"
-          echo "Deployment URL: ${{ steps.deployment.outputs.page_url }}"kl
-
+          echo "Deployment URL: ${{ steps.deployment.outputs.page_url }}"
